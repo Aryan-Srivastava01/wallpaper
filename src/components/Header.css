@@ -1,0 +1,110 @@
+/* General header styles */
+.header {
+  width: 100vw;
+  background-color: black;
+  padding: 0 20px;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 60px; /* Fix the height of the header */
+}
+
+.left-section {
+  display: flex;
+  justify-content: left;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+
+.text {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px; /* Set a fixed gap between links */
+  align-items: center; /* Vertically center the links */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger menu icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Close icon styling */
+.close-icon {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header-content {
+    position: relative;
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Start the mobile menu right after the header */
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 0rem;
+    width: 100%;
+    text-align: center;
+    gap: 10px; /* Reduce the gap between links */
+  }
+
+  .nav-links.open {
+    display: flex; /* Show the menu when opened */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon on mobile */
+  }
+
+  .nav-links a {
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+  }
+}
+
+
